@@ -1,0 +1,18 @@
+
+
+<div id="pic-container">
+	<div class="profile-pic-holder">
+		<img src="<%= @user.avatar %>" class="img"/>
+	</div>
+</div>
+
+<p class="blist"><%= @user.first_name %>'s Bucket List</p>
+<br/>
+<% @user.trips.each do |trip| %>
+	<a href="/users/<%= @user.id %>/trips/<%= trip.id %>"><p><%= trip.destination %></p></a>
+<% end %>
+
+<a href="/users/<%= @user.id %>/trips/new" class="new-trip-link">New Trip</a>
+
+
+<%#<p><%= link_to 'Add New Trip', new_trip_path %>

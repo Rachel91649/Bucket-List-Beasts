@@ -1,0 +1,11 @@
+<p class="trip-name">Itinerary: <%= @itin.purpose %></p>
+
+<p>List of Activities</p>
+
+<% @itin.activities.each do |act| %>
+		<p class="act-list">- <%= act.item %></p><a href="/itineraries/<%= @itin.id %>/activities/<%= act.id %>/edit" class="action-links">Edit Activity</a>
+<% end %>
+<br>
+<a href="/itineraries/<%= @itin.id %>/activities/new" class="action-links">Add Activity</a> |
+
+<%= link_to "Delete Itinerary", @itinerary_path, :class => "delete-link", :method => :delete, :data => {:confirm => "Are You Sure?"} %>

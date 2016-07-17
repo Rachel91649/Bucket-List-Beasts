@@ -1,0 +1,27 @@
+<!-- <h1>Trip show page</h1> -->
+
+<!-- <h5>Add link to go back to user show page</h5> -->
+
+<!-- <p>shows trip name and destination</p> -->
+<p class="trip-name"><%= @trip.name %> in <%= @trip.destination %></p>
+<a href="/trips/<%= @trip.id %>/itineraries/new" class="action-links">Add New Itinerary</a>
+
+<% @trip.itineraries.each do |itin| %>
+			<p>Itinerary: <%= itin.purpose %></p><a href="/trips/<%= @trip.id %>/itineraries/<%= itin.id %>" class="action-links">View</a> | <a href="/trips/<%= @trip.id %>/itineraries/<%= itin.id %>/edit" class="action-links">Edit</a>
+	<!-- <a href="/trips/<%= @trip.id %>/itineraries/<% itin.id %>">DELETE</a> -->
+	<%#<%= link_to "View", @itin_path %>
+<% end %>
+<br>
+
+<!-- <a href="/users/<%= @user_id %>/trips/<%= @trip.id %>/edit">Edit Trip</a> -->
+<%= link_to "Delete Trip", @user_trip_path, :class => "delete-link", :method => :delete, :data => {:confirm => "Are You Sure?"} %>
+
+
+
+
+
+
+<!-- <p>show itinerary items</p>
+
+<p>will hopefully have a map of suggested places for that destination</p> -->
+								

@@ -1,0 +1,7 @@
+<h1>Itinerary edit n shit</h1>
+
+
+<%= form_for(@itin, url: trip_itinerary_path) do |form| %>
+	name: <%= form.text_field :purpose %>
+	<%= form.submit %>
+<% end %>

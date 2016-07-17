@@ -1,0 +1,8 @@
+<h1>New Trip</h1>
+
+<%= form_for(@trip, url: user_trips_path) do |form| %>
+	Destination: <%= form.text_field :destination %>
+	Reason: <%= form.text_field :name %></br>
+	</br>
+	<%= form.submit %>
+<% end %>
