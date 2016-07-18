@@ -40,9 +40,9 @@ class ItinerariesController < ApplicationController
 	end
 
 	def destroy
-		trip = Trip.find(params[:trip_id].to_i)
+	  trip = Trip.find(params[:trip_id])
 		@itin.destroy
-		redirect_to trip
+		redirect_to current_user
 	end
 
 	private
