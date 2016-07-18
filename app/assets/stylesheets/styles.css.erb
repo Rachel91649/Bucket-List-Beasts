@@ -37,7 +37,7 @@ ul {
 	height: 100%;
 	position: absolute;
 	padding-top: 5em;
-	top: 15em;
+	top: 9.5em;
 	left: 0px;
 	color: transparent;
 	background-size: cover;
@@ -50,6 +50,26 @@ ul {
 	-moz-animation: imageAnimation 24s linear infinite 0s;
 	animation: imageAnimation 24s linear infinite 0s;
 }
+/*@media screen and (min-width: 650px) {
+	.bg-slideshow li span {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		padding-top: 5em;
+		top: 23.5em;
+		left: 0px;
+		color: transparent;
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: none;
+		opacity: 0;
+		z-index: 0;
+		-webkit-backface-visibility: hidden;
+		-webkit-animation: imageAnimation 24s linear infinite 0s;
+		-moz-animation: imageAnimation 24s linear infinite 0s;
+		animation: imageAnimation 24s linear infinite 0s;
+	}
+}*/
 .bg-slideshow li:nth-child(1) span {
 	background-image: url(<%= asset_path 'capadocia-image.jpeg' %>);
 	animation-delay: 0.5s;
@@ -106,7 +126,7 @@ ul {
 .app-title{
 	/*font-family: papyrus;*/
 	font-family: 'Lobster Two', cursive;
-	font-size: 6em;
+	font-size: 30px;
 }
 
 p {
@@ -117,8 +137,8 @@ p {
 */
 }
 .profile-pic-holder {
-	height: 463px;
-	width: 528px;
+	height: 400px;
+	width: 450px;
 	margin: 0 auto;
 }
 
@@ -168,4 +188,36 @@ input {
 }*/
 .field {
 	font-size: 10px;
+}
+
+
+/*===========================================*/
+@media(min-width: 521px){
+	.app-title {
+		font-size: 6em;
+	}
+	.bg-slideshow li span {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		padding-top: 5em;
+		top: 15em;
+		left: 0px;
+		color: transparent;
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: none;
+		opacity: 0;
+		z-index: 0;
+		-webkit-backface-visibility: hidden;
+		-webkit-animation: imageAnimation 24s linear infinite 0s;
+		-moz-animation: imageAnimation 24s linear infinite 0s;
+		animation: imageAnimation 24s linear infinite 0s;
+	}
+
+	.profile-pic-holder {
+		height: 300px;
+		width: 350px;
+		margin: 0 auto;
+	}
 }
